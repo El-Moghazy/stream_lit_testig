@@ -18,7 +18,8 @@ sheet_url = st.secrets["public_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 # Print results.
-st.text_input('WRITE YOUR THOUGHTS')
-st.write("STOP WRITING B2A")
+text = st.text_input('WRITE YOUR THOUGHTS')
+if text != None:
+    st.write("STOP WRITING B2A")
 for row in rows:
     st.write(f"{row.wholesaler_name} has a :{row.wholesaler_id_number}:")
