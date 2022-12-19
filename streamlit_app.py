@@ -19,4 +19,4 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 # Print results.
 for row in rows:
-    st.write(f"{row.name} has a :{row.pet}:")
+    st.write(f"{row.wholesaler_name} has a :{row.wholesaler_id_number}:")
