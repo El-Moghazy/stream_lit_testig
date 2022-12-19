@@ -19,7 +19,9 @@ rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
 # Print results.
 text = st.text_input('WRITE YOUR THOUGHTS')
-if text != None:
-    st.write("STOP WRITING B2A")
+if text in "WRITE YOUR THOUGHTS":
+    st.write("" + text)
+else:
+    st.write("STOP WRITING B2A" + text)
 for row in rows:
     st.write(f"{row.wholesaler_name} has a :{row.wholesaler_id_number}:")
