@@ -22,6 +22,6 @@ text = st.text_input('WRITE YOUR THOUGHTS')
 if text in "WRITE YOUR THOUGHTS":
     st.write("" + text)
 else:
-    st.write("STOP WRITING B2A" + text)
+    st.write("STOP WRITING B2A")
 for row in rows:
     st.write(f"{row.wholesaler_name} has a :{row.wholesaler_id_number}:")
